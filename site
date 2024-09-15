@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Top 5 des meilleurs combats de Dragon Ball Z avec animations et effets visuels.">
+    <title>Top 5 des Combats de Dragon Ball Z</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1c1c1c;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #ff8300;
+            padding: 40px;
+            text-align: center;
+            color: #fff;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .combat {
+            background-color: #2d2d2d;
+            margin-bottom: 50px;
+            border-radius: 10px;
+            overflow: hidden;
+            transform: translateY(50px);
+            opacity: 0;
+            transition: all 0.5s ease;
+            position: relative;
+        }
+
+        .combat.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .combat img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .combat:hover img {
+            transform: scale(1.05);
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #ff8300;
+            margin: 0;
+            padding: 15px 20px;
+        }
+
+        p {
+            padding: 0 20px;
+            font-size: 1.2rem;
+            line-height: 1.7;
+        }
+
+        .description {
+            background-color: #3c3c3c;
+            padding: 20px;
+        }
+
+        /* Animated Buttons */
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #ff8300;
+            color: #fff;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            margin: 20px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #ff6600;
+            color: #fff;
+        }
+
+        .button:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            background-color: rgba(255, 255, 255, 0.3);
+            width: 300%;
+            height: 300%;
+            border-radius: 50%;
+            transition: transform 0.5s ease;
+        }
+
+        .button:hover:before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        footer {
+            text-align: center;
+            background-color: #ff8300;
+            padding: 20px;
+            color: #fff;
+            font-size: 1.2rem;
+            margin-top: 50px;
+        }
+
+        .details {
+            display: none;
+            padding: 20px;
+            background-color: #3c3c3c;
+            margin-top: 10px;
+            border-radius: 10px;
+            line-height: 1.7;
+        }
+
+        .details.active {
+            display: block;
+        }
+
+        /* Keyframes for animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Top 5 des Combats de Dragon Ball Z</h1>
+    </header>
+
+    <section>
+        <!-- Combat 1 -->
+        <div class="combat">
+            <img src="https://www.dragon-ball-gif.com/wp-content/uploads/2021/06/Goku-claque-Freezer.gif" alt="Goku vs Freezer">
+            <h2>1. Goku vs Freezer</h2>
+            <div class="description">
+                <p>
+                    Ce combat épique sur Namek est marqué par la transformation légendaire de Goku en Super Saiyan. 
+                    Face à Freezer, qui a détruit sa planète d'origine, Goku doit surpasser ses limites.
+                </p>
+                <div class="button" onclick="toggleDetails(1)">Voir Détails</div>
+                <div id="details-1" class="details">
+                    Ce combat se déroule dans les épisodes 87 à 105 de la saga Dragon Ball Z, diffusés en 1991. Goku affronte Freezer sur la planète Namek, 
+                    et la bataille atteint son apogée lorsque Goku, voyant son ami Krillin mourir aux mains de Freezer, se transforme pour la première fois 
+                    en Super Saiyan. Cette transformation marque un tournant dans la série, symbolisant le dépassement ultime de Goku. Freezer, capable de 
+                    détruire des planètes entières, est enfin confronté à une menace réelle. La tension et l'intensité du combat font de cette bataille l'une 
+                    des plus emblématiques de toute la série Dragon Ball.
+                </div>
+            </div>
+        </div>
+
+        <!-- Combat 2 -->
+        <div class="combat">
+            <img src="https://www.dragon-ball-gif.com/wp-content/uploads/2023/04/Gohan-Super-Saiyan-2-pleure-2.gif" alt="Gohan vs Cell">
+            <h2>2. Gohan vs Cell</h2>
+            <div class="description">
+                <p>
+                    Gohan affronte Cell dans un duel où il révèle sa véritable puissance. Son Kamehameha final avec 
+                    Goku à ses côtés est un moment mémorable qui a marqué les fans.
+                </p>
+                <div class="button" onclick="toggleDetails(2)">Voir Détails</div>
+                <div id="details-2" class="details">
+                    Ce combat épique se déroule dans les épisodes 181 à 191 de la saga Cell Games, diffusés en 1993. 
+                    Gohan, sous la pression de Cell et des attentes de son père, accède finalement à un nouveau niveau 
+                    de puissance : Super Saiyan 2. Le point culminant du combat est le moment où Goku, bien que mort, 
+                    aide Gohan à réaliser un Kamehameha ultime pour vaincre Cell, marquant ainsi la victoire de la Terre 
+                    sur la menace bio-mécanique. Ce combat est une démonstration poignante du potentiel de Gohan, 
+                    qui dépasse enfin son père.
+                </div>
+            </div>
+        </div>
+
+        <!-- Combat 3 -->
+        <div class="combat">
+            <img src="https://media1.tenor.com/m/6xJbSioMWN4AAAAd/dragon-ball-z-kakarot.gif" alt="Vegeta vs Majin Buu">
+            <h2>3. Vegeta vs Majin Buu</h2>
+            <div class="description">
+                <p>
+                    Dans un acte héroïque, Vegeta se sacrifie pour tenter de détruire Majin Buu. Ce moment montre la
+                    rédemption du prince Saiyan, prêt à tout pour protéger sa famille.
+                </p>
+                <div class="button" onclick="toggleDetails(3)">Voir Détails</div>
+                <div id="details-3" class="details">
+                    Ce combat a lieu dans les épisodes 232 à 237, diffusés en 2002. Vegeta, manipulé par Babidi et 
+                    devenu Majin Vegeta, tente de vaincre Majin Buu en sacrifiant sa propre vie. Ce geste marque un 
+                    tournant majeur dans le développement du personnage de Vegeta, qui passe d'un prince Saiyan égoïste 
+                    à un héros prêt à tout pour protéger sa famille et la Terre. Malgré son sacrifice, Majin Buu 
+                    survit, mais l'acte de Vegeta reste gravé dans l'histoire des Z Fighters.
+                </div>
+            </div>
+        </div>
+
+        <!-- Combat 4 -->
+        <div class="combat">
+            <img src="https://www.dragon-ball-gif.com/wp-content/uploads/2021/04/Goku-VS-Kid-Buu.gif" alt="Goku vs Kid Buu">
+            <h2>4. Goku vs Kid Buu</h2>
+            <div class="description">
+                <p>
+                    Goku affronte la forme la plus pure et destructrice de Majin Buu dans un ultime combat pour la survie de l'univers.
+                    Un moment de pure adrénaline où l'Esprit Universel joue un rôle clé.
+                </p>
+                <div class="button" onclick="toggleDetails(4)">Voir Détails</div>
+                <div id="details-4" class="details">
+                    Ce combat se déroule dans les épisodes 277 à 287, diffusés en 2003. Kid Buu, la forme la plus 
+                    primitive et la plus puissante de Majin Buu, est enfin confronté à Goku et Vegeta. Goku, accédant 
+                    à la transformation en Super Saiyan 3, tente de contenir Kid Buu, mais réalise rapidement que seul 
+                    l'Esprit Universel, une attaque nécessitant l'énergie de tous les êtres vivants de l'univers, peut 
+                    vaincre cette menace. Ce combat est l'apothéose de la saga Majin Buu.
+                </div>
+            </div>
+        </div>
+
+        <!-- Combat 5 -->
+        <div class="combat">
+            <img src="https://www.dragon-ball-gif.com/wp-content/uploads/2021/05/Goku-VS-Vegeta-2.gif" alt="Goku vs Vegeta">
+            <h2>5. Goku vs Vegeta</h2>
+            <div class="description">
+                <p>
+                    Le premier affrontement entre Goku et Vegeta est un choc titanesque, montrant la rivalité naissante
+                    entre les deux Saiyans qui deviendra légendaire.
+                </p>
+                <div class="button" onclick="toggleDetails(5)">Voir Détails</div>
+                <div id="details-5" class="details">
+                    Ce combat légendaire a lieu dans les épisodes 28 à 35, diffusés en 1989. Vegeta, arrivé sur Terre 
+                    en quête des Dragon Balls, affronte Goku dans un duel intense. Ce combat est marqué par des 
+                    techniques emblématiques comme le Kaioken de Goku et la transformation en singe géant (Oozaru) 
+                    de Vegeta. Leur rivalité est née de ce combat, et elle continuera à définir leur relation tout 
+                    au long de la série. C'est également un moment clé où Goku prouve qu'il est prêt à tout pour 
+                    protéger la Terre.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2024 Dragon Ball Z | Tous droits réservés.
+    </footer>
+
+    <script>
+        function toggleDetails(id) {
+            const details = document.getElementById('details-' + id);
+            details.classList.toggle('active');
+        }
+
+        // Animation de visibilité des combats
+        const combats = document.querySelectorAll('.combat');
+        window.addEventListener('scroll', function () {
+            const triggerBottom = window.innerHeight / 5 * 4;
+            combats.forEach(combat => {
+                const combatTop = combat.getBoundingClientRect().top;
+                if (combatTop < triggerBottom) {
+                    combat.classList.add('visible');
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
+
